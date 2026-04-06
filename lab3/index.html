@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <style>
+        body {
+  background: linear-gradient(to right, #f8fafc, #e2e8f0);
+}
+
+/* Card styling upgrade */
+.custom-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.custom-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Image */
+.custom-card img {
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Card body */
+.custom-card .card-body {
+  text-align: center;
+}
+
+/* Neighbour highlight */
+.neighbour {
+  border: 2px solid #22c55e !important;
+  position: relative;
+}
+
+.neighbour::before {
+  content: "Neighbour";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #22c55e;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+      </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find Country by its Name</h1>
+
+    <div class="container py-5">
+
+  <!-- Search -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-md-6">
+      <div class="input-group shadow-sm">
+        <input id="input" type="text" class="form-control" placeholder="Search country...">
+        <button id="submit" class="btn btn-primary px-4">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div id="output" class="row g-5 justify-content-center"></div>
+
+</div>
+    <script src="./index.js"> </script>
+    
+</body>
+</html>
